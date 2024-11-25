@@ -1,0 +1,222 @@
+<!DOCTYPE html>  
+<html lang="pt-BR">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Acme Corporation</title>  
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">  
+    <style>  
+
+    </style>  
+</head>  
+<body>  
+    <header>  
+        <nav>  
+            <ul>  
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Eletroeletronica.html">Eletroeletrônica</a></li>  
+                <li><a href="Redes.html">Redes</a></li>  
+                <li><a href="BancodeDados.html">Banco de Dados</a></li>  
+                <li><a href="Algoritmos.html">Algoritmos e Fluxogramas</a></li>  
+                <li><a href="Programação.html">Programação</a></li>     
+            </ul>  
+        </nav>  
+    </header>  
+    
+    <main>  
+        <section>  
+            <h1>Eletroeletronica</h1>  
+            <p></p>  
+        </section>  
+
+        <hr>
+
+        <section>  
+            <h2>Resistores e código de cores</h2>
+            <h3>Código de Cores do Resistor</h3>  
+            <table>  
+                <tr>  
+                    <th>Cor</th>  
+                    <th>Valor (1ª e 2ª Banda)</th>  
+                    <th>Multiplicador</th>  
+                    <th>Tolerância</th>  
+                </tr>  
+                <tr>  
+                    <td><div class="color-box" style="background-color: brown;"></div></td>  
+                    <td>1</td>  
+                    <td>10</td>  
+                    <td>&#177; 1%</td>  
+                </tr>  
+                <tr>  
+                    <td><div class="color-box" style="background-color: red;"></div></td>  
+                    <td>2</td>  
+                    <td>100</td>  
+                    <td>&#177; 2%</td>  
+                </tr>  
+                <tr>  
+                    <td><div class="color-box" style="background-color: orange;"></div></td>  
+                    <td></td>  
+                    <td>1,000</td>  
+                    <td></td>  
+                </tr>  
+                <tr>  
+                    <td><div class="color-box" style="background-color: yellow;"></div></td>  
+                    <td></td>  
+                    <td>10,000</td>  
+                    <td></td>  
+                </tr>  
+                <tr>  
+                    <td><div class="color-box" style="background-color: green;"></div></td>  
+                    <td></td>  
+                    <td>100,000</td>  
+                    <td>&#177; 0,5%</td>  
+                </tr>  
+                <tr>  
+                    <td><div class="color-box" style="background-color: blue;"></div></td>  
+                    <td></td>  
+                    <td>1,000,000</td>  
+                    <td>&#177; 0,25%</td>  
+                </tr>  
+                <tr>  
+                    <td><div class="color-box" style="background-color: violet;"></div></td>  
+                    <td></td>  
+                    <td></td>  
+                    <td>&#177; 0,1%</td>  
+                </tr>  
+                <tr>  
+                    <td><div class="color-box" style="background-color: gray;"></div></td>  
+                    <td></td>  
+                    <td></td>  
+                    <td>&#177; 0,05%</td>  
+                </tr>  
+                <tr>  
+                    <td><div class="color-box" style="background-color: gold;"></div></td>  
+                    <td></td>  
+                    <td></td>  
+                    <td>&#177; 5%</td>  
+                </tr>  
+                <tr>  
+                    <td><div class="color-box" style="background-color: silver;"></div></td>  
+                    <td></td>  
+                    <td></td>  
+                    <td>&#177; 10%</td>  
+                </tr>  
+            </table>  
+        </section>
+
+        <hr>
+
+        <section>  
+            <h2>Diodo LED e display sete segmentos</h2>  
+            </script>   
+                <h2>Diodo LED</h2>  
+                <div class="led" id="led"></div>  
+                <button onclick="toggleLED()">Ligar/Desligar LED</button>  
+            
+                <script>  
+                    let ledOn = false;  
+                    function toggleLED() {  
+                        ledOn = !ledOn;  
+                        let led = document.getElementById('led');  
+                        led.classList.toggle('on', ledOn);  
+                    }  
+                </script>  
+
+                <h3>Display de Sete Segmentos</h3>  
+                <div class="display">  
+                    <div class="segment a"></div>  
+                    <div class="segment b"></div>  
+                    <div class="segment c"></div>  
+                    <div class="segment d"></div>  
+                    <div class="segment e"></div>  
+                    <div class="segment f"></div>  
+                    <div class="segment g"></div>  
+                </div>  
+                <div style="text-align: center;">  
+                    <button onclick="toggleSegment('a')">A</button>  
+                    <button onclick="toggleSegment('b')">B</button>  
+                    <button onclick="toggleSegment('c')">C</button>  
+                    <button onclick="toggleSegment('d')">D</button>  
+                    <button onclick="toggleSegment('e')">E</button>  
+                    <button onclick="toggleSegment('f')">F</button>  
+                    <button onclick="toggleSegment('g')">G</button>  
+                </div>  
+
+                <script>  
+                    function toggleSegment(segment) {  
+                        const seg = document.querySelector('.segment.' + segment);  
+                        seg.classList.toggle('on');  
+                    }  
+                </script>  
+        </section>
+
+        <hr>
+
+        <section>  
+            <h2>Tinkercard</h2>
+        </section>
+        
+        <hr>
+
+        <section>  
+            <h2>Placa Arduíno</h2>
+            <div class="arduino-card">  
+                <h2>Arduino Uno</h2>  
+                <p>O Arduino Uno é uma placa de microcontrolador baseada no ATmega328P. Ela possui 14 pinos digitais de entrada/saída, 6 entradas analógicas, uma conexão USB, um conector de alimentação, um cabeçalho ICSP e um botão de reset. É a placa mais comum utilizada para aprender e experimentar com eletrônica.</p>  
+                <h3>Especificações:</h3>  
+                <ul>  
+                    <li>Microcontrolador: ATmega328P</li>  
+                    <li>Tensão de Operação: 5V</li>  
+                    <li>Tensão de Entrada (recomendada): 7-12V</li>  
+                    <li>Pinos Digitais de I/O: 14</li>  
+                    <li>Pinos de Entrada Analógica: 6</li>  
+                    <li>Memória Flash: 32 KB (ATmega328P)</li>  
+                </ul>  
+            </div>  
+        </section>
+
+        <hr>
+
+        <section>  
+            <h2>Entrada analógica no arduíno</h2>
+            <div class="card">  
+                <p>As entradas analógicas no Arduino permitem a leitura de sinais analógicos, que podem variar continuamente entre dois valores. O Arduino pode ler essas entradas através de seus pinos analógicos, que convertem o sinal analógico em um valor digital.</p>  
+                
+                <h3>Como funciona:</h3>  
+                <p>O Arduino usa um ADC (Conversor Analogico-Digital) para converter o sinal analógico. Por exemplo, se você conectar um potenciômetro a um dos pinos analógicos, você pode ler o valor que varia de 0 a 1023, representando uma tensão de 0V a 5V (para o Arduino Uno).</p>  
+                
+                <h3>Exemplo de Código:</h3>  
+                <pre><code>  
+            int sensorPin = A0; // Pino analógico onde o sensor está conectado  
+            int valorSensor;  
+            
+            void setup() {  
+                Serial.begin(9600); // Inicializa a comunicação serial  
+            }  
+            
+            void loop() {  
+                valorSensor = analogRead(sensorPin); // Lê o valor do pino analógico  
+                Serial.println(valorSensor); // Envia o valor para o monitor serial  
+                delay(500); // Espera meio segundo  
+            }  
+                </code></pre>  
+            </div>  
+            <h2>Saída analógica no arduíno</h2>
+            <p></p>
+        </section>
+
+        <hr>
+
+        <section>  
+            <h2>Entrada digital no arduíno</h2>
+            <p></p>
+            <h2>Saída digital no arduíno</h2>
+            <p></p>
+        </section>
+
+    <footer>  
+        <p>&copy; 2023 Acme Corporation. Todos os direitos reservados.</p>  
+    </footer>  
+</body>  
+</html>
