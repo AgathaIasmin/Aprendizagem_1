@@ -23,48 +23,69 @@
             </ul>  
         </nav>  
     </header>  
+    <h1>Banco de Dados</h1>  
+    
+    <h2>O que é um banco de dados?</h2>  
+    <p>  
+        Um banco de dados é uma coleção organizada de dados que permite armazenar, gerenciar e recuperar informações de forma eficiente.  
+    </p>  
 
-    <section>  
-        <h2>O que é um banco de dados</h2>
-        <p></p>
-    </section>
+    <h2>Banco de dados relacional</h2>  
+    <p>  
+        Um banco de dados relacional armazena dados em tabelas inter-relacionadas, utilizando um modelo baseado em relações. Exemplos incluem MySQL e Oracle.  
+    </p>  
 
-    <section>  
-        <h2>banco de dados relacional</h2>
-        <p></p>
-    </section>
+    <h2>Banco de dados não relacional</h2>  
+    <p>  
+        Um banco de dados não relacional não utiliza tabelas rígidas e é ideal para grandes volumes de dados. Exemplos incluem MongoDB e Cassandra.  
+    </p>  
 
-    <section>  
-        <h2>banco de dados não relacional</h2>
-        <p></p>
-    </section>
+    <h2>Diagrama Conceitual DER</h2>  
+    <p>  
+        Um diagrama de entidade-relacionamento que representa entidades e seus relacionamentos graficamente.  
+    </p>  
 
-    <section>  
-        <h2>o que é um diagrama condeitual DER</h2>
-        <p></p>
+    <h2>Diagrama Lógico MER</h2>  
+    <p>  
+        Um modelo entidade-relacionamento mais detalhado, que representa entidades, atributos e relacionamentos de forma lógica.  
+    </p>  
 
-        <h2>o que é um diagrama lógico MER</h2>
-        <p></p>
-    </section>
+    <h2>Exemplos de Diagramas</h2>  
+    <pre>  
+    Diagrama DER:  
+    [Cliente] -- (Faz) --> [Pedido]  
+    [Pedido] -- (Contém) --> [Produto]  
 
-    <section>  
-        <h2>apresentar o diagrama DER do exercício</h2>
-        <p></p>
+    Diagrama MER:  
+    [Cliente]  
+      - ID_cliente (PK)  
+      - Nome  
+      - Endereço  
 
-        <h2>apresentar o diagrama MER do exercício</h2>
-        <p></p>
-    </section>
+    [Pedido]  
+      - ID_pedido (PK)  
+      - Data  
+      - ID_cliente (FK)  
 
-    <section>  
-        <h2>quais os banco de dados que a empresa trabalha?</h2>
-        <p></p>
-    </section>
+    [Produto]  
+      - ID_produto (PK)  
+      - Nome  
+      - Preço  
 
-    <section>  
-        <h2>O que é dicionário de dados</h2>
-        <p></p>                     
-    </section>
+    Relacionamentos:  
+    - Cliente (1) ---- (N) Pedido  
+    - Pedido (N) ---- (N) Produto  
+    </pre>  
 
+    <h2>Bancos de dados utilizados pela empresa</h2>  
+    <p>  
+        Exemplos comuns incluem: MySQL, PostgreSQL, MongoDB, Microsoft SQL Server, Oracle.  
+    </p>  
+
+    <h2>O que é um dicionário de dados?</h2>  
+    <p>  
+        Um dicionário de dados armazena informações sobre os dados utilizados em um sistema, incluindo descrições de cada item de dados.  
+    </p>  
     <footer>  
         <p>&copy; 2023 Acme Corporation. Todos os direitos reservados.</p>  
     </footer>  

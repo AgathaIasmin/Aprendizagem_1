@@ -202,8 +202,34 @@
             }  
                 </code></pre>  
             </div>  
-            <h2>Saída analógica no arduíno</h2>
-            <p></p>
+            <h2>Saída Analógica no Arduino</h2>  
+<div class="card">  
+    <p>A saída analógica no Arduino permite gerar sinais analógicos, que podem variar continuamente entre dois valores, geralmente representando uma tensão que pode ser ajustada ao longo de um intervalo.</p>  
+    
+    <h3>Como funciona:</h3>  
+    <p>O Arduino utiliza a modulação por largura de pulso (PWM) para simular a saída analógica, já que ele não possui pinos de saída analógica verdadeiramente analógicos. Quando você configura um pino como saída PWM, o Arduino varia a largura dos pulsos para criar uma tensão média que pode mudar continuamente entre 0V e 5V (para o Arduino Uno).</p>  
+    
+    <h3>Exemplo de Código:</h3>  
+    <pre><code>  
+        int ledPin = 9; // Pino PWM onde o LED está conectado  
+        int intensidade; // Variável para armazenar o valor da intensidade do LED  
+        
+        void setup() {  
+            // Não é necessário configurar nada no setup para PWM  
+        }  
+        
+        void loop() {  
+            for (int intensidade = 0; intensidade <= 255; intensidade++) { // Aumenta a intensidade  
+                analogWrite(ledPin, intensidade); // Escreve o valor PWM no pino  
+                delay(10); // Espera 10ms  
+            }  
+            for (int intensidade = 255; intensidade >= 0; intensidade--) { // Diminui a intensidade  
+                analogWrite(ledPin, intensidade); // Escreve o valor PWM no pino  
+                delay(10); // Espera 10ms  
+            }  
+        }  
+    </code></pre>  
+</div>  
         </section>
 
         <hr>
