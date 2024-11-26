@@ -7,9 +7,6 @@
     <link rel="stylesheet" href="style2.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">  
     <script src="matriz.js" defer></script>
-    <style>  
-
-    </style>  
 </head>  
 <body>  
     <header>  
@@ -33,155 +30,147 @@
         
         <section>
             <h2>Gerar e Somar Matrizes</h2>
-      <button id="gerarMatrizesBtn">Gerar Matrizes e Somar</button>  
-      <h2>Matriz 1:</h2>
-      <div id="matriz1"></div>
-      <h2>Matriz 2:</h2>
-      <div id="matriz2"></div>
-      <h2>Soma das Matrizes:</h2>
-      <div id="matriz3"></div>
-      <h2>Soma dos elementos divisíveis por 3:</h2>
-      <div id="somaDivisiveisPor3"></div>
+            <button id="gerarMatrizesBtn">Gerar Matrizes e Somar</button>  
+            <h2>Matriz 1:</h2>
+            <div id="matriz1"></div>
+            <h2>Matriz 2:</h2>
+            <div id="matriz2"></div>
 
-      <h2>Matriz e soma dos numeros pares</h2>
-      <button id="gerarMatrizes2Btn">Gerar</button>  
-      <div id="MatrizContainer"></div>
-      <h2>soma dos numeros pares: <span id="somaParContainer"></span></h2>
-      <h2>soma dos numeros Impares: <span id="somaImparContainer"></span></h2>
-      <script>
-      let matriz1 = [
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0]
-     ];
-     
-     let matriz2 = [
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0]
-     ];
-     
-     let matriz3 = [
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0]
-     ];
-     
-     function gerarMatriz1() {
-        for (let i = 0; i < 7; i++) {
-           for (let j = 0; j < 7; j++) {
-              matriz1[i][j] = gerarAleatorio(20, 1);
-           }
-        }
-        return matriz1;
-     }
-     
-     function gerarMatriz2() {
-        for (let i = 0; i < 7; i++) {
-           for (let j = 0; j < 7; j++) {
-              matriz2[i][j] = gerarAleatorio(20, 1);
-           }
-        }
-        return matriz2;
-     }
-     
-     function somarMatrizes() {
-        for (let i = 0; i < 7; i++) {
-           for (let j = 0; j < 7; j++) {
-              matriz3[i][j] = matriz1[i][j] + matriz2[i][j];
-           }
-        }
-        return matriz3;
-     }
-     
-     function exibirMatriz(matriz, elementoId) {
-        let html = '<table>';
-        for (let row of matriz) {
-           html += '<tr>';
-           for (let value of row) {
-              html += `<td>${value}</td>`;
-           }
-           html += '</tr>';
-        }
-        html += '</table>';
-        document.getElementById(elementoId).innerHTML = html;
-     }
-     
-     document.getElementById('gerarMatrizesBtn').addEventListener('click', () => {
-        gerarMatriz1();
-        gerarMatriz2();
-        somarMatrizes();
-     
-        exibirMatriz(matriz1, 'matriz1');
-        exibirMatriz(matriz2, 'matriz2');
-        exibirMatriz(matriz3, 'matriz3');
-     });
+            <h2>Soma das Matrizes:</h2>
+            <div id="matriz3"></div>
 
-     
- let matriz4 = [
-    [0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0]
- ];
- 
- function gerarMatriz3() {
-    for (let i = 0; i < 7; i++) {
-       for (let j = 0; j < 7; j++) {
-          matriz4[i][j] = gerarAleatorio(1, 20);
-       }
-    }
-    console.table(matriz4);
-    exibirMatriz1();
- }
- 
- function exibirMatriz1() {
-    let matrizDiv = document.getElementById('matriz4');
-    let html = '<table>';
-    for (let i = 0; i < matriz4.length; i++) {
-       html += '<tr>';
-       for (let j = 0; j < matriz4[i].length; j++) {
-          html += `<td>${matriz4[i][j]}</td>`;
-       }
-       html += '</tr>';
-    }
-    html += '</table>';
-    matrizDiv.innerHTML = html;
- }
- 
- function somarTres() {
-    let soma = 0;
-    for (let i = 0; i < 7; i++) {
-       for (let j = 0; j < 7; j++) {
-          if (matriz4[i][j] % 3 === 0) {
-             soma += matriz4[i][j];
-          }
-       }
-    }
-    document.getElementById('somaDivisiveisPor3').innerText = `A soma dos elementos divisíveis por 3 é: ${soma}`;
- }
- 
- // Event listener para gerar a matriz 3 e somar elementos divisíveis por 3
- document.getElementById('gerarMatrizes1Btn').addEventListener('click', function () {
-    gerarMatriz3();
-    somarTres();
- });
-    </script>
+            <hr>
+
+            <h2>Matriz e soma dos números pares e impares</h2>
+            <button id="gerarMatrizes2Btn">Gerar</button>  
+            <div id="MatrizContainer"></div>
+            <h2>Soma dos números pares: <span id="somaParContainer"></span></h2>
+            <h2>Soma dos números ímpares: <span id="somaImparContainer"></span></h2>
+            
+            <script>
+                function gerarAleatorio(min, max) {
+                    return Math.floor(Math.random() * (max - min + 1)) + min;
+                }
+
+                let matriz1 =  [
+   [0, 0, 0, 0, 0, 0, 0],
+   [0, 0, 0, 0, 0, 0, 0],
+   [0, 0, 0, 0, 0, 0, 0],
+   [0, 0, 0, 0, 0, 0, 0],
+   [0, 0, 0, 0, 0, 0, 0],
+   [0, 0, 0, 0, 0, 0, 0],
+   [0, 0, 0, 0, 0, 0, 0]
+];
+                let matriz2 =  [
+   [0, 0, 0, 0, 0, 0, 0],
+   [0, 0, 0, 0, 0, 0, 0],
+   [0, 0, 0, 0, 0, 0, 0],
+   [0, 0, 0, 0, 0, 0, 0],
+   [0, 0, 0, 0, 0, 0, 0],
+   [0, 0, 0, 0, 0, 0, 0],
+   [0, 0, 0, 0, 0, 0, 0]
+];
+                let matriz3 =  [
+   [0, 0, 0, 0, 0, 0, 0],
+   [0, 0, 0, 0, 0, 0, 0],
+   [0, 0, 0, 0, 0, 0, 0],
+   [0, 0, 0, 0, 0, 0, 0],
+   [0, 0, 0, 0, 0, 0, 0],
+   [0, 0, 0, 0, 0, 0, 0],
+   [0, 0, 0, 0, 0, 0, 0]
+];
+
+                function gerarMatriz1() {
+                  for (let i = 0; i < 7; i++) {
+                        for (let j = 0; j < 7; j++) {
+                            matriz1[i][j] = gerarAleatorio(1, 20);
+                        }
+                    }
+                    return matriz1;
+                }
+
+                function gerarMatriz2() {
+                    for (let i = 0; i < 7; i++) {
+                        for (let j = 0; j < 7; j++) {
+                            matriz2[i][j] = gerarAleatorio(1, 20);
+                        }
+                    }
+                    return matriz2;
+                }
+
+                function somarMatrizes() {
+                    for (let i = 0; i < 7; i++) {
+                        for (let j = 0; j < 7; j++) {
+                            matriz3[i][j] = matriz1[i][j] + matriz2[i][j];
+                        }
+                    }
+                    return matriz3;
+                }
+
+                function exibirMatriz(matriz, elementoId) {
+                    let html = '<table>';
+                    for (let row of matriz) {
+                        html += '<tr>';
+                        for (let value of row) {
+                            html += `<td>${value}</td>`;
+                        }
+                        html += '</tr>';
+                    }
+                    html += '</table>';
+                    document.getElementById(elementoId).innerHTML = html;
+                }
+
+                document.getElementById('gerarMatrizesBtn').addEventListener('click', () => {
+                    gerarMatriz1();
+                    gerarMatriz2();
+                    somarMatrizes();
+
+                    exibirMatriz(matriz1, 'matriz1');
+                    exibirMatriz(matriz2, 'matriz2');
+                    exibirMatriz(matriz3, 'matriz3');
+                });
+
+                let matriz4 =  [
+   [0, 0, 0, 0, 0, 0, 0],
+   [0, 0, 0, 0, 0, 0, 0],
+   [0, 0, 0, 0, 0, 0, 0],
+   [0, 0, 0, 0, 0, 0, 0],
+   [0, 0, 0, 0, 0, 0, 0],
+   [0, 0, 0, 0, 0, 0, 0],
+   [0, 0, 0, 0, 0, 0, 0]
+];
+
+                function gerarMatriz3() {
+                    for (let i = 0; i < 7; i++) {
+                        for (let j = 0; j < 7; j++) {
+                            matriz4[i][j] = gerarAleatorio(1, 20);
+                        }
+                    }
+                    exibirMatriz(matriz4, 'MatrizContainer');
+                    somarParesEImpares();
+                }
+
+                function somarParesEImpares() {
+                    let somaPar = 0;
+                    let somaImpar = 0;
+                    for (let i = 0; i < 7; i++) {
+                        for (let j = 0; j < 7; j++) {
+                            if (matriz4[i][j] % 2 === 0) {
+                                somaPar += matriz4[i][j];
+                            } else {
+                                somaImpar += matriz4[i][j];
+                            }
+                        }
+                    }
+                    document.getElementById('somaParContainer').innerText = somaPar;
+                    document.getElementById('somaImparContainer').innerText = somaImpar;
+                }
+
+                document.getElementById('gerarMatrizes2Btn').addEventListener('click', () => {
+                    gerarMatriz3();
+                });
+            </script>
         </section>
+    </main>
 </body>  
-</html>
+</html>  
